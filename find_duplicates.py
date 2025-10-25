@@ -1,6 +1,6 @@
 import os
 import numpy as np
-from github import Github
+from github import Github, Auth
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import json # Moved import to top
@@ -8,7 +8,7 @@ import json # Moved import to top
 # --- CONSTANTES ---
 # Lire les inputs en utilisant les NOMS EXACTS passés par l'action Docker (avec traits d'union)
 TOKEN = os.environ.get('INPUT_GITHUB-TOKEN') 
-SIMILARITY_THRESHOLD = float(os.environ.get('INPUT_THRESHOLD', '0.95')) # INPUT_THRESHOLD (pas de trait d'union) est correct
+SIMILARITY_THRESHOLD = float(os.environ.get('INPUT_THRESHOLD', '0.70')) # INPUT_THRESHOLD (pas de trait d'union) est correct
 LABEL_NAME_INPUT = os.environ.get('INPUT_DUPLICATE-LABEL') # Lire avec trait d'union
 
 # Variables d'environnement GitHub standard
@@ -48,7 +48,8 @@ print(f"Analyse de l'issue #{ISSUE_NUMBER} dans {REPO_NAME}...")
 
 # --- 1. CONNEXION ET RÉCUPÉRATION DES ISSUES ---
 try:
-    g = Github(TOKEN)
+    auth = Auth.Token(TOKEN)
+    g = Github(auth=auth)
     repo = g.get_repo(REPO_NAME)
     new_issue = repo.get_issue(number=ISSUE_NUMBER)
     # S'assurer que title et body sont des chaînes, même si None
