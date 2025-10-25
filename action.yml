@@ -1,0 +1,27 @@
+# action.yml
+name: 'Chercheur de Duplicata (NLP)'
+description: "Trouve les issues en double en utilisant le NLP (similarité sémantique) et ajoute un label/commentaire."
+
+branding:
+  icon: 'search'
+  color: 'blue'
+
+inputs:
+  github-token:
+    description: 'Le GITHUB_TOKEN du dépôt qui utilise cette action. Requis pour interagir avec l API GitHub.'
+    required: true
+  
+  threshold:
+    description: 'Le score de similarité minimum (entre 0.0 et 1.0) pour considérer une issue comme un duplicata.'
+    required: false
+    default: '0.95'
+
+  duplicate-label:
+    description: 'Le nom du label à ajouter aux issues identifiées comme duplicatas potentiels. Le label doit exister dans le dépôt.'
+    required: false
+    default: 'potential-duplicate'
+
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
