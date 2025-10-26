@@ -1,5 +1,5 @@
 # action.yml
-name: 'Issue duplicate detector'
+name: 'Duplicated issue detector'
 description: "Finds duplicate issues using NLP (semantic similarity) and adds a label/comment."
 
 branding:
