@@ -32,7 +32,7 @@ Here are the parameters you can configure:
 To use this action, create a workflow file in your repository, for example `.github/workflows/check-duplicates.yml`:
 
 ```yaml
-name: 'Duplicate Issue Detector (NLP)'
+name: 'Duplicated Issue Detector (NLP)'
 
 # Triggers when a new issue is opened
 on:
