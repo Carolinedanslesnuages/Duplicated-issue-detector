@@ -1,6 +1,6 @@
 # action.yml
-name: 'Chercheur de Duplicata (NLP)'
-description: "Trouve les issues en double en utilisant le NLP (similarité sémantique) et ajoute un label/commentaire."
+name: 'Issue duplicate detector'
+description: "Finds duplicate issues using NLP (semantic similarity) and adds a label/comment."
 
 branding:
   icon: 'search'
@@ -8,16 +8,16 @@ branding:
 
 inputs:
   github-token:
-    description: 'Le GITHUB_TOKEN du dépôt qui utilise cette action. Requis pour interagir avec l API GitHub.'
+    description: 'The GITHUB_TOKEN for the repository using this action. Required to interact with the GitHub API.'
     required: true
   
   threshold:
-    description: 'Le score de similarité minimum (entre 0.0 et 1.0) pour considérer une issue comme un duplicata.'
+    description: 'The minimum similarity score (between 0.0 and 1.0) to consider an issue a duplicate.'
     required: false
-    default: '0.95'
+    default: '0.80'
 
   duplicate-label:
-    description: 'Le nom du label à ajouter aux issues identifiées comme duplicatas potentiels. Le label doit exister dans le dépôt.'
+    description: 'The name of the label to add to issues identified as potential duplicates. The label must exist in the repository.'
     required: false
     default: 'potential-duplicate'
 
