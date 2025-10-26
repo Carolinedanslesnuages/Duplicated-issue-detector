@@ -1,4 +1,4 @@
-# Duplicate Issue Detector Action 🤖🔍
+# Duplicated Issue Detector Action 🤖🔍
 
 [![GitHub Marketplace](https://img.shields.io/badge/Marketplace-Issue%20Duplicate%20Detector-blue.svg?colorA=24292e&colorB=0366d6&style=flat&longCache=true&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNzIgNzIiIGlkPSJsb2dvIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zNiAwQzE2LjExIDAgMCAxNi4xMSAwIDM2czE2LjExIDM2IDM2IDM2IDM2LTE2LjExIDM2LTM2UzU1LjkgMCAzNiAwem0xMi42MyAzOC43NGMtMS40OCAxLjQ4LTQuOTIgMS40OC02LjQgMC0xLjQ4LTEuNDgtMS40OC00LjkyIDAtNi40IDEuNDgtMS40OCA0LjkyLTEuNDggNi40IDAgMS40OSAxLjQ4IDEuNDkgNC45MiAwIDYuNHptLTIxLjgzIDEuNDhjLTEuNDggMS40OC00LjkyIDEuNDgtNi40IDAtMS40OC0xLjQ4LTEuNDgtNC45MiAwLTYuNCAtMS4xMyAxLjA4LTEuMDggMy4xNS4xMiA0LjM3IDEuMzQgMS4zMyAzLjY0IDEuMzMgNS4xMiAwIDEuMSMtMS4xLjEzLTMuMTEtMS4wMi00LjM3em0yMS44My0xLjQ4YzEuNDkgMS40OCAxLjQ5IDQuOTIgMCA2LjQtMS40OCAxLjQ4LTQuOTIgMS40OC02LjQgMC0xLjQ4LTEuNDgtMS40OC00LjkyIDAtNi40IDEuNDgtMS40OCA0LjkyLTEuNDggNi40IDB6bS0yNC4wOC02LjQxYy0xLjU5IDAtMi44OCAxLjMtMi44OCAyLjg4cyAxLjI5IDIuODggMi44OCAyLjg4IDIuODgtMS4yOSAyLjg4LTIuODhTOTIzLjczIDMyLjM0IDIyLjE1IDMyLjM0eiIgZmlsbD0iIzAzNjZkNiIvPjwvc3ZnPg==)](https://github.com/marketplace/actions/issue-duplicate-detector) 
 
@@ -52,7 +52,7 @@ jobs:
       - name: Run Duplicate Issue Detector
         # Replace YOUR-USERNAME with your GitHub username
         # Use @v1 (or the version you released)
-        uses: carolinedanslesnuages/Duplicate-issue-detector@v1
+        uses: carolinedanslesnuages/Duplicated-issue-detector@v1
         with:
           # Pass the secret token provided by GitHub
           github-token: ${{ secrets.GITHUB_TOKEN }}
